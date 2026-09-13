@@ -21,8 +21,8 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', db: 'neon', time: new Date().toISOString() });
 });
 
-// Serve the static frontend from the project root
-const rootDir = path.join(__dirname, '..');
+// ✅ Serve frontend from the SERVER folder itself
+const rootDir = __dirname;
 app.use(express.static(rootDir));
 app.get('*', (req, res) => {
   res.sendFile(path.join(rootDir, 'index.html'));
