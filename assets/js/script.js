@@ -99,7 +99,7 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
 // ⚠️ Change this to your deployed backend URL in production
-const API_URL = "http://localhost:5000/api/contact";
+const API_URL = "/api/contact";
 
 // Enable submit button only when form is valid
 for (let i = 0; i < formInputs.length; i++) {
